@@ -1,0 +1,29 @@
+ IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://qavbox.github.io/demo/signup/");
+            driver.Manage().Window.Maximize();
+
+            IWebElement fname = driver.FindElement(By.XPath("//input[@id='username']"));
+            fname.SendKeys("cyril newton");
+
+            IWebElement email = driver.FindElement(By.XPath("//input[@id='email']"));
+            email.SendKeys("newton");
+
+            IWebElement Telephone = driver.FindElement(By.XPath("//input[@id='tel']"));
+            Telephone.SendKeys("8976545321");
+
+            IWebElement experience = driver.FindElement(By.XPath("//input[@value='two']"));
+           experience.Click();
+
+            IWebElement skills = driver.FindElement(By.XPath("//input[@value='automationtesting']"));
+            skills.Click();
+
+            SelectElement gender = new SelectElement(driver.FindElement(By.XPath("//select[@name='sgender']")));
+            gender.SelectByIndex(1);
+
+            SelectElement tools = new SelectElement(driver.FindElement(By.XPath("//select[@id='tools']")));
+            tools.SelectByValue("selenium");
+
+             driver.FindElement(By.XPath("//input[@id='submit']")).Submit();
+
+
+//div/ul/li/span[text()='Boarding & Dropping Points']

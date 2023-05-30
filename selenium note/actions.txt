@@ -1,0 +1,13 @@
+//DRAG AND DROP
+---------------
+IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://demoqa.com/droppable/");
+            driver.Manage().Window.Maximize();
+
+            Actions action = new Actions(driver);
+       
+            IWebElement drag = driver.FindElement(By.XPath("//div[@id='draggable']"));
+
+            IWebElement drop = driver.FindElement(By.XPath("(//p[text()='Drop here'])[1]"));
+            action.DragAndDrop(drag,drop).Build().Perform();
+            Thread.Sleep(5000);

@@ -1,0 +1,5 @@
+Actions action = new Actions(driver);
+IWebElement drag = driver.FindElement(By.XPath("//div[@id='draggable']"));
+IWebElement drop = driver.FindElement(By.XPath("(//p[text()='Drop here);
+driver.Manage().Window.Maximize();
+action.DragAndDrop(drag,drop).Build().Perform();

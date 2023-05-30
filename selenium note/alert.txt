@@ -1,0 +1,14 @@
+//alert
+            
+         //IWebDriver driver = new ChromeDriver();
+           //driver.Navigate().GoToUrl("https://www.tnpsc.gov.in/");
+           //driver.Manage().Window.Maximize();
+
+            
+          // IWebElement popup = driver.FindElement(By.XPath("//h3[text()='Registered User']"));
+           //popup.Click();
+
+
+          // IAlert alert = driver.SwitchTo().Alert();
+          // alert.Accept();
+

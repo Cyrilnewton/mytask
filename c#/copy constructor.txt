@@ -1,0 +1,42 @@
+public class Employee  
+    {  
+       public string firstName;  
+       public string lastName;  
+       public string position;  
+       public int salary;  
+        public Employee()  
+        {  
+                  
+        }  
+        // Copy constructor.  
+        public Employee(Employee employee)  
+        {  
+            firstName = employee.firstName;  
+            lastName  = employee.lastName;  
+            position  = employee.position;  
+            salary    = employee.salary;  
+        }  
+  
+    }  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            Employee emp = new Employee();  
+            Employee emp1 = new Employee(emp);  
+   
+            Console.WriteLine("Enter your first name:");  
+            emp1.firstName = Convert.ToString(Console.ReadLine());  
+            Console.WriteLine("Enter your last name:");  
+            emp1.lastName = Convert.ToString(Console.ReadLine());  
+            Console.WriteLine("Enter your position:");  
+            emp1.position = Convert.ToString(Console.ReadLine());  
+            Console.WriteLine("Enter your salary:");  
+            emp1.salary = Convert.ToInt32(Console.ReadLine());  
+  
+            Console.WriteLine("First Name:" + emp1.firstName);  
+            Console.WriteLine("Last Name:" + emp1.lastName);  
+            Console.WriteLine("Position:" + emp1.position);  
+            Console.WriteLine("Salary:" + emp1.salary);  
+        }  
+    }

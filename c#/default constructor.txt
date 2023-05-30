@@ -1,0 +1,23 @@
+public class Customer
+    {
+        public string firstName;
+        public string lastName;
+        public Customer()
+        {
+
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer custormer = new Customer();
+            custormer.firstName = "Farhan";
+            custormer.lastName = "Ahmed";
+
+            Console.WriteLine("Full Name:" + custormer.firstName + " " + custormer.lastName);
+            Console.ReadLine();
+
+        }
+    }
+} 

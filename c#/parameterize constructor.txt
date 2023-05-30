@@ -1,0 +1,23 @@
+class ParameterConstructor  
+    {  
+        public int FirstNumber;  
+        public int SecondNumber;  
+  
+        public ParameterConstructor(int firstNumber, int secondNumber)  
+        {  
+            FirstNumber = firstNumber;  
+            SecondNumber = secondNumber;  
+        }  
+    }  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            ParameterConstructor p = new ParameterConstructor(10, 20);  
+            int Result = p.FirstNumber + p.SecondNumber;  
+  
+            Console.WriteLine("Total:" + Result);  
+            Console.ReadLine();  
+        }  
+    }  
+} 

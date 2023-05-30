@@ -1,0 +1,33 @@
+public class Customer  
+    {  
+        public string firstName;  
+        public string lastName;  
+        public static string discount;  
+  
+        public Customer(string FirstName, string LastName)  
+        {  
+            firstName = FirstName;  
+            lastName = LastName;  
+        }  
+        static Customer()  
+        {  
+            discount = 10+"%";  
+        }  
+        public void CustomerDetails()  
+        {  
+            Console.WriteLine("Full Name:{0}", firstName +" "+lastName );  
+            Console.WriteLine("Discount:{0}",discount + "\n");  
+        }    
+    }  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            Customer c1 = new Customer("Farhan","Ahmed");  
+            Customer c2 = new Customer("Abdul", "Jabbar");  
+            c1.CustomerDetails();  
+            c2.CustomerDetails();  
+            Console.ReadLine();  
+        }  
+    }  
+}

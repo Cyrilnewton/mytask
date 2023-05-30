@@ -1,0 +1,35 @@
+Console.WriteLine("Enter a string to check either it's Palindrome or not");
+
+string statement = Console.ReadLine();
+
+//variable to hold the reversed statement
+
+string reverseStatement = "";
+
+//Reverse the statement
+
+for (int i=statement.Length-1;i>=0;i--) {
+
+    reverseStatement += statement[i];
+
+}
+
+//Check statement and reverse statement are equal
+
+if (statement.Equals(reverseStatement, StringComparison.OrdinalIgnoreCase))
+
+{
+
+    Console.WriteLine("'{0}' is an example of Palindrome", statement);
+
+}
+
+else {
+
+    Console.WriteLine("'{0}' is not an example of Palindrome", statement);
+
+}
+
+//Console.ReadLine() to hold the screen after the execution of the program
+
+Console.ReadLine();

@@ -1,0 +1,26 @@
+public class Candidate  
+    {  
+        private Candidate()  
+        {  
+                  
+        }  
+        public static int CandidateVisitedForInterview;  
+        public static int CountCandidate()  
+        {  
+            return ++CandidateVisitedForInterview;  
+        }  
+  
+    }  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            // The following comment line will throw an error because constructor is inaccessible  
+            //Candidate candidate = new Candidate();  
+            Candidate.CandidateVisitedForInterview = 20;  
+            Candidate.CountCandidate();  
+            Console.WriteLine("Interviewed candidates: {0}", Candidate.CandidateVisitedForInterview);  
+            Console.ReadLine();  
+        }  
+    }  
+}
